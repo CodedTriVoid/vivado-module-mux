@@ -1,0 +1,27 @@
+mkdir -p docs
+cat > docs/index.html <<'EOF'
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Module_mux Project</title>
+</head>
+<body>
+  <h1>Module_mux (Vivado / Verilog)</h1>
+  <p>Two-stage mux chain + simple 2:1 mux output.</p>
+
+  <h2>Behavior</h2>
+  <ul>
+    <li><code>z = (s0) ? v : u</code></li>
+    <li><code>m = (s1) ? w : ((s0) ? v : u)</code></li>
+  </ul>
+
+  <h2>Repo</h2>
+  <p>See the README for build/sim steps.</p>
+</body>
+</html>
+EOF
+
+git add docs/index.html
+git commit -m "Add GitHub Pages index"
+git push
