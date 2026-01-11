@@ -33,13 +33,9 @@ Two-stage mux chain + simple 2:1 mux output.
 
 ### Testbench 
 Contains 5 test cases to test both mux modules
-#### Truth Table
-u v w | s0 s1 |  m z
-0 1 0 |  0  0 |  u u
-0 1 0 |  1  0 |  v v
-0 1 0 |  0  1 |  w u
-1 0 1 |  1  1 |  w v
-1 1 0 |  1  0 |  v v
+
+### Waveform screenshot 
+![Waveform showing m and z behavior](docs/wave_mux.png)
 
 
 ## How to simulate in Vivado
