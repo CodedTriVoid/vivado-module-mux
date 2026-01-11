@@ -21,19 +21,26 @@ Rather than focusing on complexity, the intent of this project is to show **clea
 
 Two-stage mux chain + simple 2:1 mux output.
 
-## What it does
+#### 2 stage Mux Test (3 bits)
 - `z` = 2:1 mux selecting between `u` and `v` with `s0`
 - `m` = cascaded mux:
   - stage1: `n` = mux(u, v, s0)
   - stage2: `m` = mux(n, w, s1)
 
-So:
+#### Simple 2 bit Mux test (2 bits)
 - `z = (s0) ? v : u`
 - `m = (s1) ? w : ((s0) ? v : u)`
 
-## Files
-- `rtl/` — design sources
-- `tb/` — testbench sources
+### Testbench 
+Contains 5 test cases to test both mux modules
+#### Truth Table
+u v w | s0 s1 |  m z
+0 1 0 |  0  0 |  u u
+0 1 0 |  1  0 |  v v
+0 1 0 |  0  1 |  w u
+1 0 1 |  1  1 |  w v
+1 1 0 |  1  0 |  v v
+
 
 ## How to simulate in Vivado
 1. Add RTL files to **Design Sources**
