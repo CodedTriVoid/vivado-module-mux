@@ -38,8 +38,14 @@ Contains 5 test cases to test both mux modules
 ![Waveform showing m and z behavior](docs/wave_mux.png)
 
 
-## How to simulate in Vivado
-1. Add RTL files to **Design Sources**
-2. Add testbench to **Simulation Sources**
-3. Set `tb_Module_mux` as simulation top
-4. Run Behavioral Simulation
+## Lessons Learned
+
+- Workflow
+  - Structured RTL, testbench, and generated files for reproducible Vivado simulations
+  - Improved intuition for simulation setup, hierarchy, and waveform debugging
+- Behavioral vs. Structural Design
+  - Reinforced how behavioral logic maps to structural module instantiation
+  - Observed signal propagation and override behavior in cascaded designs
+- Version Control
+  - Used Git as the source of truth for RTL and testbench code
+  - Excluded tool-generated artifacts to keep the repository clean
