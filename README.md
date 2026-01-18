@@ -32,8 +32,16 @@ Two-stage mux chain + simple 2:1 mux output.
 ### Testbench 
 Contains 5 test cases to test both mux modules
 
+### RTL screenshot
+![RTL block diagram](docs/RTL_Mux.png)
+
+- This design compares structural and behavioral RTL methodologies by implementing equivalent multiplexer logic using hierarchical module instantiation versus explicit gate-level logic, demonstrating understanding of hardware abstraction and design tradeoffs.
+
 ### Waveform screenshot 
 ![Waveform showing m and z behavior](docs/wave_mux.png)
+
+- u,v, and w are the inputs and s0,s1 are the selectors. 
+- The test confirms both multiplexers work.
 
 ## Lessons Learned
 
